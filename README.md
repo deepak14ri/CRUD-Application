@@ -2,7 +2,7 @@
 
 ![crud](https://github.com/deepak14ri/CRUD-Application/assets/49471265/ba66d61b-c199-4b8a-8fdd-22a3328d710d)
 
-Thes steps, I took to create a CRUD (Create, Read, Update, Delete) operation in a React application with a server-side app and MongoDB setup:
+These steps, I took to create a CRUD (Create, Read, Update, Delete) operation in a React application with a server-side app and MongoDB setup:
 
 # Create React App:
 To start building our application, we set up a new React project using the Create React App tool. This provides a solid foundation and essential configurations to develop our frontend user interface.
