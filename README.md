@@ -34,4 +34,4 @@ For updating user information, I implement an API endpoint on the server to hand
 # Delete a Record:
 Lastly, I create an API endpoint to handle the deletion of user records. When the frontend sends a delete request, the server identifies the user to be deleted, removes their entry from the database, and sends a response back to confirm the successful deletion.
 
-By following these steps, I stablishe the above application.
+By following these steps, I stablished the above application.
