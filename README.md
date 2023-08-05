@@ -1,6 +1,6 @@
 # CRUD-Application
 
-![crud](https://github.com/deepak14ri/CRUD-Application/assets/49471265/ba66d61b-c199-4b8a-8fdd-22a3328d710d)
+![crud-img](https://github.com/deepak14ri/CRUD-Application/assets/49471265/569a0e4b-15c5-4d03-b284-4b77b2426b2e)
 
 These steps, I took to create a CRUD (Create, Read, Update, Delete) operation in a React application with a server-side app and MongoDB setup:
 
