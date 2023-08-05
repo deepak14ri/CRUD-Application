@@ -34,4 +34,4 @@ For updating user information, we implement an API endpoint on the server to han
 # Delete a Record:
 Lastly, we create an API endpoint to handle the deletion of user records. When the frontend sends a delete request, the server identifies the user to be deleted, removes their entry from the database, and sends a response back to confirm the successful deletion.
 
-By following these steps, we establish a full-fledged CRUD system where users can be created, read, updated, and deleted, with the frontend interacting with the backend server, which, in turn, communicates with the MongoDB database to store and retrieve user data.
+By following these steps, I stablishe the above application.
