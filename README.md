@@ -1,5 +1,7 @@
 # CRUD-Application
 
+![crud](https://github.com/deepak14ri/CRUD-Application/assets/49471265/ba66d61b-c199-4b8a-8fdd-22a3328d710d)
+
 Thes steps, I took to create a CRUD (Create, Read, Update, Delete) operation in a React application with a server-side app and MongoDB setup:
 
 # Create React App:
@@ -33,6 +35,3 @@ For updating user information, we implement an API endpoint on the server to han
 Lastly, we create an API endpoint to handle the deletion of user records. When the frontend sends a delete request, the server identifies the user to be deleted, removes their entry from the database, and sends a response back to confirm the successful deletion.
 
 By following these steps, we establish a full-fledged CRUD system where users can be created, read, updated, and deleted, with the frontend interacting with the backend server, which, in turn, communicates with the MongoDB database to store and retrieve user data.
-
-
-![crud](https://github.com/deepak14ri/CRUD-Application/assets/49471265/ba66d61b-c199-4b8a-8fdd-22a3328d710d)
