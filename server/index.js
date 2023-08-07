@@ -16,13 +16,13 @@ app.use(express.json())
 mongoose.connect('mongodb+srv://deepak123:deepak123@crud-app.kd7akgs.mongodb.net/test?retryWrites=true&w=majority');
 app.get('/', (req, res) => {
     UserModel.find()
-    .then(users => res.json(users))
+    .then(items => res.json(items))
     .catch(err => res.json(err))
 })
 
 app.post('/create', (req, res) => {
     UserModel.create(req.body)
-    .then(user => res.json(user))
+    .then(item => res.json(item))
     .catch(err => res.json(err))
 })
 
@@ -32,7 +32,7 @@ app.put('/update/:id', (req, res) => {
         name: req.body.name,
         desc: req.body.desc,
         price: req.body.price
-    }).then(user => res.json(user))
+    }).then(item => res.json(item))
     .catch(err => res.json(err))
 })
 
