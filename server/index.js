@@ -4,7 +4,13 @@ const cors = require('cors')
 const UserModel = require('./Models/User')
 
 const app = express()
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["https://crud-server-api.vercel.app"],
+        methods: [ "POSTS", "GETS" ],
+        credentials: true
+    }
+));
 app.use(express.json())
 
 // mongoose.connect('mongodb://127.0.0.1:27017/crud');
