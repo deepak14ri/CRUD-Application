@@ -15,20 +15,20 @@ app.use(express.json())
 
 mongoose.connect('mongodb+srv://deepak123:deepak123@crud-app.kd7akgs.mongodb.net/test?retryWrites=true&w=majority');
 app.get('/', (req, res) => {
-    UserModel.find()
+    ItemModel.find()
     .then(items => res.json(items))
     .catch(err => res.json(err))
 })
 
 app.post('/create', (req, res) => {
-    UserModel.create(req.body)
+    ItemModel.create(req.body)
     .then(item => res.json(item))
     .catch(err => res.json(err))
 })
 
 app.put('/update/:id', (req, res) => {
     const id = req.params.id;
-    UserModel.findByIdAndUpdate({_id: id}, {
+    ItemModel.findByIdAndUpdate({_id: id}, {
         name: req.body.name,
         desc: req.body.desc,
         price: req.body.price
@@ -36,9 +36,9 @@ app.put('/update/:id', (req, res) => {
     .catch(err => res.json(err))
 })
 
-app.delete('/deleteuser/:id', (req, res) => {
+app.delete('/deleteitem/:id', (req, res) => {
     const id = req.params.id;
-    UserModel.findByIdAndDelete({_id: id})
+    ItemModel.findByIdAndDelete({_id: id})
     .then(response => res.json(response))
     .catch(err => res.json(err))
 })
