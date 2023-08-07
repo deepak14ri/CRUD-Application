@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { updateUser } from "../redux/userSlice";
+import { updateItem } from "../redux/itemSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import '../components/App.css';
@@ -12,7 +12,7 @@ function UpdateItem() {
     const [desc, setDesc] = useState()
     const [price, setPrice] = useState()
     
-    const users = useSelector(state => state.users.users)
+    const items = useSelector(state => state.items.items)
     
     useEffect(()=> {
         const item = items.find(u => u.id === id)
@@ -29,7 +29,7 @@ function UpdateItem() {
         axios.put('https://crud-client-navy.vercel.app/update/'+id, {name, desc, price})
         .then(res => {
           if(name!=='' && desc!=='' && price!==''){
-            dispatch(updateUser({id, name, desc, price}))
+            dispatch(updateItem({id, name, desc, price}))
             navigate('/')
           }
         })
@@ -44,7 +44,7 @@ function UpdateItem() {
         <div className="d-flex vh-100 bg justify-content-center align-items-center" >
       <div className="w-50 bg-white rounded p-3">
         <form onSubmit={handleUpdate}>
-          <h2>Update User</h2>
+          <h2>Update Item</h2>
           <div className="mb-2">
             <label htmlFor="">Item Name</label>
             <input
