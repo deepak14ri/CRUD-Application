@@ -6,7 +6,7 @@ const UserModel = require('./Models/User')
 const app = express()
 app.use(cors(
     {
-        origin: ["https://crud-client-navy.vercel.app/"],
+        origin: ["https://crud-client-navy.vercel.app"],
         methods: [ "POSTS", "GETS" ],
         credentials: true
     }
