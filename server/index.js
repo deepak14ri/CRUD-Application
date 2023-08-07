@@ -13,7 +13,7 @@ app.use(cors(
 ));
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://deepak123:deepak123@crud-app.kd7akgs.mongodb.net/crud-app?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://deepak123:deepak123@crud-app.kd7akgs.mongodb.net/test?retryWrites=true&w=majority');
 app.get('/', (req, res) => {
     UserModel.find()
     .then(users => res.json(users))
