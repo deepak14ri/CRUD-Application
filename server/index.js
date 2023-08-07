@@ -7,7 +7,7 @@ const app = express()
 app.use(cors(
     {
         origin: ["https://crud-client-navy.vercel.app"],
-        methods: [ "POST", "GET" ],
+        methods: ["POST", "GET"],
         credentials: true
     }
 ));
