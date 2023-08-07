@@ -26,7 +26,7 @@ function UpdateUser() {
 
     const handleUpdate = (e) => {
         e.preventDefault()
-        axios.put('http://localhost:3001/update/'+id, {name, desc, price})
+        axios.put('https://crud-client-navy.vercel.app/update/'+id, {name, desc, price})
         .then(res => {
           if(name!=='' && desc!=='' && price!==''){
             dispatch(updateUser({id, name, desc, price}))
