@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Users from '../components/Users'
+import Items from '../components/Items'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import CreateUser from '../components/CreateUser'
+import CreateItem from '../components/CreateItem'
 import { useEffect } from 'react'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
-import { getUser } from '../redux/userSlice'
-import UpdateUser from '../components/UpdateUser'
+import { getItem } from '../redux/itemSlice'
+import UpdateItem from '../components/UpdateItem'
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
     const fetchData = async() => {
         try {
             const response = await axios.get('https://crud-server-api.vercel.app');
-            dispatch(getUser(response.data));
+            dispatch(getItem(response.data));
         } catch(err) {
             console.log(err)
         }
@@ -28,9 +28,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Users />}></Route>
-        <Route path='/create' element={<CreateUser />}></Route>
-        <Route path='/edit/:id' element={<UpdateUser />}></Route>
+        <Route path='/' element={<Items />}></Route>
+        <Route path='/create' element={<CreateItem />}></Route>
+        <Route path='/edit/:id' element={<UpdateItem />}></Route>
       </Routes>
     </BrowserRouter>
   )
