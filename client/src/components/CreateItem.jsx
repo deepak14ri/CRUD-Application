@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
-import { addUser } from "../redux/userSlice";
+import { addItem } from "../redux/itemSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import '../components/App.css';
 
-function CreateUser() {
+function CreateItem() {
 
     const [name, setName] = useState()
     const [desc, setDesc] = useState()
@@ -66,4 +66,4 @@ function CreateUser() {
   );
 }
 
-export default CreateUser;
+export default CreateItem;
