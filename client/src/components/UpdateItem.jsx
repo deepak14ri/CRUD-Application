@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import '../components/App.css';
 
-function UpdateUser() {
+function UpdateItem() {
     const {id} = useParams()
    
     const [name, setName] = useState()
@@ -15,10 +15,10 @@ function UpdateUser() {
     const users = useSelector(state => state.users.users)
     
     useEffect(()=> {
-        const user = users.find(u => u.id === id)
-        setName(user.name)
-        setDesc(user.desc)
-        setPrice(user.price)
+        const item = items.find(u => u.id === id)
+        setName(item.name)
+        setDesc(item.desc)
+        setPrice(item.price)
     }, []);
 
     const dispatch = useDispatch()
@@ -86,4 +86,4 @@ function UpdateUser() {
      );
 }
 
-export default UpdateUser;
+export default UpdateItem;
