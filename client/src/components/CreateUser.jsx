@@ -16,7 +16,7 @@ function CreateUser() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/create', {name, desc, price})
+        axios.post('https://crud-client-navy.vercel.app/create', {name, desc, price})
         .then(res => {
             dispatch(addUser(res.data))
             navigate('/')
