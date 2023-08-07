@@ -11,7 +11,7 @@ function Users() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:3001/deleteuser/${id}`)
+      .delete(`https://crud-client-navy.vercel.app/deleteuser/${id}`)
       .then((res) => {
         dispatch(deleteUser({ id }));
       })
