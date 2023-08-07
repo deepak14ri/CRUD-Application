@@ -2,18 +2,18 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { deleteUser } from "../redux/userSlice";
+import { deleteItem } from "../redux/itemSlice";
 import '../components/App.css';
 
-function Users() {
-  const users = useSelector((state) => state.users.users);
+function Items() {
+  const items = useSelector((state) => state.items.items);
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
     axios
-      .delete(`https://crud-client-navy.vercel.app/deleteuser/${id}`)
+      .delete(`https://crud-client-navy.vercel.app/deleteitem/${id}`)
       .then((res) => {
-        dispatch(deleteUser({ id }));
+        dispatch(deleteItem({ id }));
       })
       .catch((err) => console.log(err));
   };
@@ -34,20 +34,20 @@ function Users() {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
-              <tr key={user.id}>
-                <td>{user.name}</td>
-                <td>{user.desc}</td>
-                <td>₹ {user.price}</td>
+            {items.map((item) => (
+              <tr key={item.id}>
+                <td>{item.name}</td>
+                <td>{item.desc}</td>
+                <td>₹ {item.price}</td>
                 <td>
                   <Link
-                    to={`/edit/${user.id}`}
+                    to={`/edit/${item.id}`}
                     className="btn btn-sm btn-success me-2"
                   >
                     Update
                   </Link>
                   <button
-                    onClick={() => handleDelete(user.id)}
+                    onClick={() => handleDelete(item.id)}
                     className="btn btn-sm btn-danger"
                   >
                     Delete
@@ -62,4 +62,4 @@ function Users() {
   );
 }
 
-export default Users;
+export default Items;
